@@ -8,23 +8,29 @@
 
 import UIKit
 
+// Original code as per Stanford tutorial
+// class ViewController: UIViewController
+// Removed the sub-classing of UIViewController as per
+// http://stackoverflow.com/questions/29457720/compiler-error-method-with-objective-c-selector-conflicts-with-previous-declara/29457777#29457777
+// Fixed the issue
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
 
-    var userIsInTheMiddleOfTypingANumber = false
+    var UserInTheMiddleOfTypingANumber = false
     
     @IBAction func appendDigit(sender: UIButton) {
         
         let digit = sender.currentTitle!
         println("digit = \(digit)")
         
-        if userIsInTheMiddleOfTypingANumber {
+        if UserInTheMiddleOfTypingANumber {
             display.text = display.text! + digit
             
         } else {
             display.text = digit
-            userIsInTheMiddleOfTypingANumber = true
+            UserInTheMiddleOfTypingANumber = true
         }
         
     }
@@ -33,7 +39,7 @@ class ViewController: UIViewController {
     
 
     @IBAction func enter() {
-        userIsInTheMiddleOfTypingANumber = false
+        UserInTheMiddleOfTypingANumber = false
         operandStack.append(displayValue)
         println("operandStack = \(operandStack)")
     }
@@ -45,13 +51,13 @@ class ViewController: UIViewController {
         
         set {
             display.text = "\(newValue)"
-            userIsInTheMiddleOfTypingANumber = false
+            UserInTheMiddleOfTypingANumber = false
         }
     }
     
     @IBAction func operation(sender: UIButton) {
         let operation = sender.currentTitle!
-        if userIsInTheMiddleOfTypingANumber {
+        if UserInTheMiddleOfTypingANumber {
             enter()
         }
 
@@ -65,7 +71,7 @@ class ViewController: UIViewController {
             
             case "➖": performOperation { $1 - $0}
 
-//            case "✔️": performOperation { sqrt($0)}
+            case "✔️": performOperation { sqrt($0)}
 
         default: break
         }
@@ -75,11 +81,16 @@ class ViewController: UIViewController {
         if operandStack.count >= 2 {
             displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
             enter()
-        } else {
-            println("Not enough values on the stack, need minimum of 2")
         }
     }
-
+    
+    func performOperation(operation: (Double) -> Double) {
+        if operandStack.count >= 1 {
+            displayValue = operation(operandStack.removeLast())
+            enter()
+        }
+        
+    }
 
     
 }
