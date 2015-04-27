@@ -12,8 +12,7 @@ import UIKit
 // class ViewController: UIViewController
 // Removed the sub-classing of UIViewController as per
 // http://stackoverflow.com/questions/29457720/compiler-error-method-with-objective-c-selector-conflicts-with-previous-declara/29457777#29457777
-// Fixed the issue
-
+// Seemed to fix the issue, but the best fix is reverting to XCode 6.1.1
 class ViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
