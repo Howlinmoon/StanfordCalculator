@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func performOperation(operation: (Double) -> Double) {
+    func performOperation(operation: Double -> Double) {
         if operandStack.count >= 1 {
             displayValue = operation(operandStack.removeLast())
             enter()
