@@ -13,6 +13,7 @@
 		9611B0141AED12DD004B44E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9611B0131AED12DD004B44E6 /* Images.xcassets */; };
 		9611B0171AED12DD004B44E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9611B0151AED12DD004B44E6 /* LaunchScreen.xib */; };
 		9611B0231AED12DD004B44E6 /* StanfordCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611B0221AED12DD004B44E6 /* StanfordCalculatorTests.swift */; };
+		96C598371AEFE6CC00C4F669 /* StanfordCalulatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C598361AEFE6CC00C4F669 /* StanfordCalulatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9611B01C1AED12DD004B44E6 /* StanfordCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanfordCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9611B0211AED12DD004B44E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9611B0221AED12DD004B44E6 /* StanfordCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordCalculatorTests.swift; sourceTree = "<group>"; };
+		96C598361AEFE6CC00C4F669 /* StanfordCalulatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanfordCalulatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				9611B00C1AED12DD004B44E6 /* AppDelegate.swift */,
 				9611B00E1AED12DD004B44E6 /* ViewController.swift */,
+				96C598361AEFE6CC00C4F669 /* StanfordCalulatorBrain.swift */,
 				9611B0101AED12DD004B44E6 /* Main.storyboard */,
 				9611B0131AED12DD004B44E6 /* Images.xcassets */,
 				9611B0151AED12DD004B44E6 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				9611B00F1AED12DD004B44E6 /* ViewController.swift in Sources */,
 				9611B00D1AED12DD004B44E6 /* AppDelegate.swift in Sources */,
+				96C598371AEFE6CC00C4F669 /* StanfordCalulatorBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
