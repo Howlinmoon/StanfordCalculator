@@ -4,3 +4,4 @@ After translocating the smarts out of the view controller to an external class f
 
 Currently triple checking code against the video - but it looks the same.
 
+Giving up and moving on to the next project
